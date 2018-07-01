@@ -1,9 +1,12 @@
 <template>
   <div>
-    <div class="login-header">
-      <div class="iconfont back-icon">&#xe600;</div>
-    </div>
+    <!-- <router-link to="/">
+      <div class="login-header">
+        <div class="iconfont back-icon">&#xe600;</div>
+      </div>
+    </router-link> -->
     <login-header class="login-way"></login-header>
+    {{this.$store.state.phoneNo}}
   </div>
 </template>
 
@@ -18,13 +21,6 @@ export default {
 </script>
 
 <style scoped>
-  .login-header {
-    line-height: 1rem;
-  }
-  .login-header .back-icon {
-    font-size: .4rem;
-    text-indent: .5rem;
-  }
   .login-way {
     position: absolute;
     top: 0;

@@ -1,5 +1,10 @@
 <template>
   <div>
+    <router-link to="/">
+      <div class="login-header">
+        <div class="iconfont back-icon">&#xe600;</div>
+      </div>
+    </router-link>
     <ul class="header-nav" @click="headerNavClick">
       <li id="authcode" :class="{ active: isActive}">验证码登陆</li>
       <li id="password" :class="{ active: !isActive}">密码登陆</li>
@@ -40,6 +45,11 @@ export default {
 }
 </script>
 <style>
+  .login-header .back-icon {
+    line-height: 1rem;
+    font-size: .4rem;
+    text-indent: .5rem;
+  }
   .header-nav {
     display: flex;
     list-style: none;

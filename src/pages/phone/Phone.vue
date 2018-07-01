@@ -9,7 +9,7 @@
         <span>{{this.areacode}}</span>
         <span class="iconfont right-icon">></span>
       </router-link>
-      <input type="text" v-model="num" class="phone-input">
+      <input @input="handleInput" type="text" class="phone-input" :value="this.$store.state.phoneNo">
     </div>
     <div class="split"></div>
     <div class="phone-protocol">
@@ -18,22 +18,30 @@
         <span class="phone-protocol-right">遇到问题?</span>
       </router-link>
     </div>
-    <div class="phone-next">
-      <button class="phone-btn-next">下一步</button>
-    </div>
+    <router-link to="/login">
+      <div class="phone-next">
+        <button class="phone-btn-next">下一步</button>
+      </div>
+    </router-link>
     <other-way class="phone-other-way"></other-way>
   </div>
 </template>
 
 <script>
+// import { mapState, mapMutations } from 'vuex'
 import otherWay from './components/OtherLoginWay'
 export default {
   name: 'phone',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      areacode: '+86',
-      num: ''
+      areacode: '+86'
+    }
+  },
+  methods: {
+    handleInput (e) {
+      const val = e.target.value
+      this.$store.dispatch('changePhoneNo', val)
     }
   },
   components: {
