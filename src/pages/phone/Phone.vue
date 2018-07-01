@@ -1,7 +1,7 @@
 <template>
   <div class="phone">
     <div class="phone-header">
-      <div class="iconfont back-icon">&#xe624;</div>
+      <div class="iconfont back-icon">&#xe600;</div>
     </div>
     <div class="phone-title">输入手机号</div>
     <div class="phone-content">
@@ -21,10 +21,12 @@
     <div class="phone-next">
       <button class="phone-btn-next">下一步</button>
     </div>
+    <other-way class="phone-other-way"></other-way>
   </div>
 </template>
 
 <script>
+import otherWay from './components/OtherLoginWay'
 export default {
   name: 'phone',
   data () {
@@ -32,40 +34,40 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       areacode: '+86'
     }
+  },
+  components: {
+    otherWay
   }
 }
 </script>
 
 <style scoped>
   .phone-header {
-    width: .8rem;
     line-height: 1rem;
-    overflow: hidden;
   }
   .phone-header .back-icon {
-    float: left;
     font-size: .4rem;
-    text-align: center;
-    text-indent: .4rem;
+    text-indent: .5rem;
   }
   .phone-title {
     margin: .5rem .6rem;
     font-size: .45rem;
-    font-weight: 300;
   }
   .phone-content {
+    display: flex;
     margin-left: .6rem;
     line-height: .4rem;
     font-size: .3rem;
     vertical-align: bottom;
   }
   .phone-areacode {
-    border: .02rem solid #fff;
+    border: .02rem solid #ccc;
   }
   .phone-input {
+    flex-grow: 1;
     margin-left: .2rem;
+    margin-right: .6rem;
     caret-color: #f85d43;
-    width: 6rem;
     background: silver;
   }
   .split {
@@ -86,12 +88,17 @@ export default {
   .phone-next {
     display: flex;
     justify-content: center;
+    padding: 0 .6rem;
   }
   .phone-btn-next {
-    width: 7rem;
+    width: 100%;
     line-height: .6rem;
     border-radius: .4rem;
     background: #f85d43;
     color: #fff;
+  }
+  .phone-other-way {
+    margin-top: .8rem;
+    margin-left: .6rem;
   }
 </style>

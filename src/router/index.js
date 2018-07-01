@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Phone from '@/pages/phoneNumber/phone'
+import Phone from '@/pages/phone/Phone'
+import Login from '@/pages/login/Login'
 
 Vue.use(Router)
 
@@ -10,6 +11,10 @@ export default new Router({
       path: '/',
       name: 'Phone',
       component: Phone
+    }, {
+      path: '/login',
+      name: 'Login',
+      component: Login
     }
   ]
 })
