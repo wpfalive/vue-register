@@ -28,7 +28,7 @@
 <script>
 import otherWay from './components/OtherLoginWay'
 export default {
-  name: 'phone',
+  name: 'thirdparty',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',

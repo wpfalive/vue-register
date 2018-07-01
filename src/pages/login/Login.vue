@@ -3,7 +3,7 @@
     <div class="login-header">
       <div class="iconfont back-icon">&#xe600;</div>
     </div>
-    <login-header></login-header>
+    <login-header class="login-way"></login-header>
   </div>
 </template>
 
@@ -13,13 +13,6 @@ export default {
   name: 'Login',
   components: {
     loginHeader
-  },
-  mounted () {
-    // var obj = document.querySelector('.item')
-    // var range = window.getSelection() // 创建range
-    // range.selectAllChildren(obj) // range 选择obj下所有子内容
-    // range.collapseToEnd() // 光标移至最后
-    // console.log(obj)
   }
 }
 </script>
@@ -31,5 +24,14 @@ export default {
   .login-header .back-icon {
     font-size: .4rem;
     text-indent: .5rem;
+  }
+  .login-way {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    /* margin-left: auto;
+    margin-right: auto; */
   }
 </style>

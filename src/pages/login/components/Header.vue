@@ -43,9 +43,10 @@ export default {
   .header-nav {
     display: flex;
     list-style: none;
-    align-content: center;
+    justify-content: center;
+    width: 100%;
   }
-  li {
+  .header-nav li {
     position: relative;
     padding: 20px;
     color: #000;

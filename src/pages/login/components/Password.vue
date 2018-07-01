@@ -8,10 +8,13 @@
       <input v-model="numbers" maxlength="4" type="tel" autofocus="autofocus"/>
     </div>
     <div class="login-voice-code">
-      <span class="login-voice-code-left">语音验证码</span>
-      <router-link to="/faq">
+      <span class="login-voice-code-left">找回密码</span>
+      <!-- <router-link to="/faq">
         <span class="login-voice-code-right">重新发送(21)</span>
-      </router-link>
+      </router-link> -->
+    </div>
+    <div class="login-submit">
+      <button class="login-btn-submit">下一步</button>
     </div>
   </div>
 </template>
@@ -68,5 +71,18 @@ export default {
   }
   .login-voice-code .login-voice-code-right {
     color: #ccc;
+  }
+  .login-submit {
+    display: flex;
+    justify-content: center;
+    padding: 0 .6rem;
+    margin-top: 2rem;
+  }
+  .login-btn-submit {
+    width: 100%;
+    line-height: .6rem;
+    border-radius: .4rem;
+    background: #f85d43;
+    color: #fff;
   }
 </style>
